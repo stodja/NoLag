@@ -1,2 +1,3 @@
 # NoLag
-Searching for someone that can make an UI for this
+
+Little improvements that can help with lag in games
