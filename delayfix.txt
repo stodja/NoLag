@@ -1,0 +1,24 @@
+How To Eliminate Input Delay
+
+1. Open delayfix.bat
+
+2. Press "Yes"
+
+3. Type in the PowerShell Window this command
+   New-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\mouclass" -Name "Parameters"
+4. Press Enter
+
+5. Type in the PowerShell Window this command
+   New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\mouclass\Parameters" -Name "MouseDataQueueSize" -Value 50 -Type DWord
+6. Press Enter
+
+
+If you feel like your mouse experience is worse after those changes (some mouse aren't compatible) proceed with these steps
+
+1. Reopen delayfix.bat
+
+2. Press "Yes"
+
+3. Type in the PowerShell Window this command
+   New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\mouclass\Parameters" -Name "MouseDataQueueSize" -Value 100 -Type DWord
+4. Press Enter
